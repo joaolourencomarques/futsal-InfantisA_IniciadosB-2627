@@ -270,7 +270,7 @@ canvas{width:100%!important;height:300px!important}
 
 <script>
 /* ===== ÚNICA LINHA A ALTERAR PARA OUTRO ESCALÃO ===== */
-const ESCALAO='Infantis B 2026/27';
+const ESCALAO='Infantis A e Iniciados B 2026/27';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad=n=>String(n).padStart(2,'0');
@@ -1051,7 +1051,7 @@ function download(name,text,type){
 }
 const APP_VERSION='2026-10-15';
 const slug=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\//g,'-').replace(/[^\w-]+/g,'_').replace(/^_+|_+$/g,'');
-// AAAA-MM-DD_Escalao_Adversario.ext  (ex.: 2026-10-18_Infantis_B_2026-27_Leixoes.json)
+// AAAA-MM-DD_Escalao_Adversario.ext  (ex.: 2026-10-18_Infantis_A_2026-27_Leixoes.json)
 const fname=ext=>(session.date||'sem-data')+'_'+slug(ESCALAO)+'_'+(slug(session.opponent)||'adversario')+'.'+ext;
 const EXPORT_CATS=[
  ['entsai','Entradas e saídas (ENT, SAI)',['ENT','SAI']],
